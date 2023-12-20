@@ -9,5 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SuccessContent<T> {
     private String message;
+    private String code;
     private T data;
 }

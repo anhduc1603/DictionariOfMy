@@ -16,15 +16,13 @@ public class ResponseServiceImpl implements ResponseService{
 
     @Override
     public <T> Response<T> success(T data) {
-        SuccessContent<T> content = new SuccessContent<>(
-                this.translateService.translate("success.default"), data);
+        SuccessContent<T> content = new SuccessContent<>(this.translateService.translate("success.default"),"0", data);
         return new Response(content, HttpStatus.OK);
     }
 
     @Override
     public <T> Response<T> success(String messageCode, T data) {
-        SuccessContent<T> content = new SuccessContent<>(this.translateService.translate(messageCode),
-                data);
+        SuccessContent<T> content = new SuccessContent<>(this.translateService.translate(messageCode),"0",data);
         return new Response(content, HttpStatus.OK);
     }
 

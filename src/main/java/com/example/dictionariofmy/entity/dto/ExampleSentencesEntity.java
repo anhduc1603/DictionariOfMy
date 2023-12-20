@@ -9,5 +9,6 @@ import java.util.List;
 @Setter
 public class ExampleSentencesEntity {
     private String order;
+    private String definition;
     private List<String> listExample;
 }
